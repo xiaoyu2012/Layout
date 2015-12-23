@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginUserNameLabel"
+        android:textSize="30px" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/loginUserNameEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginPasswordLabel"
+        android:textSize="30px" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/loginPasswordEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@+id/loginSubmit"
+        android:nextFocusRight="@+id/loginSubmit"
+        android:password="true" >
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/loginRememberMeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="@string/loginRememberMe" >
+    </CheckBox>
+    
+	 <CheckBox
+        android:id="@+id/autoLoginCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:text="@string/autoLogin" >
+    </CheckBox>
+    <Button
+        android:id="@+id/loginSubmit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loginSubmit"
+        android:textSize="24px" >
+    </Button>
+
+    <Button
+        android:id="@+id/loginRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loginRegister"
+        android:textSize="24px" >
+    </Button>
+
+</LinearLayout>

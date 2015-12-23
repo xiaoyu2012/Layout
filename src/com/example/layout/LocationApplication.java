@@ -11,6 +11,7 @@ import org.json.JSONTokener;
 
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ public class LocationApplication extends Application {
 	public BDLocation lastLocation = new BDLocation();
 	public static int syn = 1;
 	public static int identify; 
+	public static String userId;
 	//public TextView trigger, exit;
 	//public Vibrator mVibrator;
 
@@ -185,13 +187,13 @@ public class LocationApplication extends Application {
         @Override
         protected void onPreExecute() {
         }
-       protected String InitData() { 	   
- 
-           
+        
+       protected String InitData() {     	   
+    	    //SharedPreferences share = this.getSharedPreferences(Login.SHARE_LOGIN_TAG, 0);
             String str ="";
             String url = "addAlarmInfoAction.action";
             List<NameValuePair> paramList = new ArrayList<NameValuePair>();
-            paramList.add(new BasicNameValuePair("userId","4"));
+            paramList.add(new BasicNameValuePair("userId",userId));
             paramList.add(new BasicNameValuePair("identify", String.valueOf(identify)));
             paramList.add(new BasicNameValuePair("syn", String.valueOf(syn++)));
             paramList.add(new BasicNameValuePair("longitude",String.valueOf(location.getLongitude())));
